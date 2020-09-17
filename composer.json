@@ -1,0 +1,27 @@
+{
+    "name": "ozzytop/m2-cms-alternate-language",
+    "description": "This is a simple hello world example.",
+    "authors": [
+        {
+            "name": "Matias Penas",
+            "email": "mattff3@gmail.com"
+        }
+    ],
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ozzytop\\Cms\\": ""
+        }
+    },
+    "require": {
+        "php": "~7.1.3||~7.2.0||~7.3.0",
+        "magento/framework": "*"
+    },
+    "version": "1.0.0",
+    "suggest": {
+        "magento/project-community-edition": "*"
+    }
+}

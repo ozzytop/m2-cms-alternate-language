@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @var \Ozzytop\Cms\Block\Cms $block
+ */
+
+$currentFullAction = $block->getRequest()->getFullActionName();
+$cmspages = array('cms_index_index','cms_page_view');
+
+// Check if current page is CMS
+if(in_array($currentFullAction, $cmspages)){
+    $pageId = $block->getPageId();    
+    if($pageId != ''){
+        $pagesStore = $block->getPages($pageId);
+    
+        foreach ($pagesStore as $page) {
+            echo "<link rel='alternate' hreflang='" . $page['language'] . "' href='" . $page['url'] . "' />";
+        }    
+    }
+}
+
+
+
